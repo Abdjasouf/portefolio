@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Souf Abdjahi-Dine | BTS SIO</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    
+    <meta charset="UTF-8" />
+    <title>Mes Projets | Souf Abdjahi-Dine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
 
 <nav>
     <ul class="menu">
-        <li class="active"><a href="index.html">Accueil</a></li>
+        <li><a href="index.html">Accueil</a></li>
         <li><a href="profil.html">Profil (CV)</a></li>
-        <li><a href="projets.html">Projets</a></li>
+        <li class="active"><a href="projets.html">Projets</a></li>
         <li><a href="documentation.html">Documentation</a></li>
         <li><a href="veille.html">Veille</a></li>
         <li><a href="stage.html">Stage</a></li>
@@ -21,3 +22,49 @@
         <li><a href="contact.html">Contact</a></li>
     </ul>
 </nav>
+
+
+<div class="projects-container">
+
+    <!-- Projet Symfony - Stage -->
+    <input type="checkbox" id="projet-symfony" />
+    <label for="projet-symfony" class="project-title">🚀 Application Web Symfony</label>
+    <div class="project-content">
+        <h3>📌 Description :</h3>
+        <p>Application web développée en Symfony dans le cadre de mon stage. Voici quelques captures d’écran des pages principales :</p>
+
+        <div class="swiper mySwiper4">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/stage1.png" alt="Stage 1" /></div>
+                <div class="swiper-slide"><img src="img/stage2.png" alt="Stage 2" /></div>
+                <div class="swiper-slide"><img src="img/stage3.png" alt="Stage 3" /></div>
+                <div class="swiper-slide"><img src="img/stage4.png" alt="Stage 4" /></div>
+                <div class="swiper-slide"><img src="img/stage5.png" alt="Stage 5" /></div>
+                <div class="swiper-slide"><img src="img/stage6.png" alt="Stage 6" /></div>
+                <div class="swiper-slide"><img src="img/stage7.png" alt="Stage 7" /></div>
+                <div class="swiper-slide"><img src="img/stage8.png" alt="Stage 8" /></div>
+                <div class="swiper-slide"><img src="img/stage9.png" alt="Stage 9" /></div>
+                <div class="swiper-slide"><img src="img/stage10.png" alt="Stage 10" /></div>
+                <div class="swiper-slide"><img src="img/stage11.png" alt="Stage 11" /></div>
+                <div class="swiper-slide"><img src="img/stage12.png" alt="Stage 12" /></div>
+                <div class="swiper-slide"><img src="img/stage13.png" alt="Stage 13" /></div>
+                <div class="swiper-slide"><img src="img/stage14.png" alt="Stage 14" /></div>
+            </div>
+
+            <!-- Navigation & Pagination Swiper -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2025 Souf Abdjahi-Dine | Portfolio BTS SIO</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

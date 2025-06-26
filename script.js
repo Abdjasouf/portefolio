@@ -52,3 +52,15 @@ const swiper3 = new Swiper('.mySwiper3', {
     clickable: true,
   },
 });
+
+const swiper4 = new Swiper('.mySwiper4', {
+  loop: true,
+  navigation: {
+    nextEl: '.mySwiper4 .swiper-button-next',
+    prevEl: '.mySwiper4 .swiper-button-prev',
+  },
+  pagination: {
+    el: '.mySwiper4 .swiper-pagination',
+    clickable: true,
+  },
+});
