@@ -124,6 +124,29 @@
     <input type="checkbox" id="projet-autre">
     <label for="projet-autre" class="project-title">💡 Autre Projet</label>
     <div class="project-content">
+     <h3>🎯 Mes missions :</h3>
+            <p><strong>🔸 Partie 1 : Gestion des photos</strong></p>
+                <ul>
+                    <li>Création d’un formulaire de sélection des types d’articles</li>
+                    <li>Affichage dynamique des photos en fonction du type sélectionné</li>
+                    <li>Lien cliquable sur le titre menant aux détails d’une photo</li>
+                </ul>
+            
+            <p><strong>🔸 Partie 2 : Gestion des articles</strong></p>
+                <ul>
+                    <li>Affichage trié des articles par date</li>
+                    <li>Affichage et ajout de photos associées à un article</li>
+                </ul>
+
+            <p><strong>🔸 Partie 3 : Gestion des photographes</strong></p>
+                <ul>
+                    <li>Affichage d’un tableau avec la liste des photographes</li>
+                    <li>Formulaire de modification du nom et prénom (hors clé primaire)</li>
+                </ul>
+
+        <!-- Lien vers le document PDF de projet -->
+        <a href="projet_clubphoto.pdf" target="_blank" class="project-link">📄 Voir le document détaillé (PDF)</a>
+        </div>
         
     </div>
 </section>
