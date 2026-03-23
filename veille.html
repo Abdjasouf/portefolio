@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Veille Technologique | Souf Abdjahi-Dine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+    <ul class="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="profil.html">Profil </a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="documentation.html">Documentation</a></li>
+        <li class="active"><a href="veille.html">Veille</a></li>
+        <li><a href="stage.html">Stages</a></li>
+        <li><a href="competence.html">Compétences</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="veille-container">
+    <h2>Ma Veille Technologique</h2>
+    <p class="veille-introduction">
+        Mon sujet de veille pour cette année est axé sur les technologies qui repoussent les limites des applications web et logicielles. J'ai choisi d'approfondir le sujet de **WebAssembly (Wasm)**, une innovation majeure pour le développement moderne.
+    </p>
+
+    <div class="veille-grid">
+        
+        <!-- Article 1: Introduction à WebAssembly -->
+        <article class="veille-card">
+            <h3>⭐ Qu'est-ce que WebAssembly (Wasm) ?</h3>
+            <p>
+                Wasm est un format d'instructions binaires de bas niveau pour une machine virtuelle "stack-based". Il est conçu pour être un langage de compilation portable pour les langages de haut niveau (C/C++, Rust, Python), permettant leur exécution côté client à une vitesse proche de la performance native.
+            </p>
+            <p class="tag-label">Domaine : Web, Performance, Langages</p>
+        </article>
+
+        <!-- Article 2: Fonctionnement et Impact sur la Performance -->
+        <article class="veille-card">
+            <h3>⚡ Performance et Langages Compilés</h3>
+            <p>
+                Contrairement à JavaScript qui est interprété, Wasm est pré-compilé et optimisé, ce qui permet des gains de performance spectaculaires, notamment pour les applications gourmandes en calcul (jeux 3D, montage vidéo, CAO). Wasm ne remplace pas JavaScript, mais travaille avec lui, permettant aux développeurs SLAM d'exploiter le meilleur des deux mondes.
+            </p>
+            <div class="image-placeholder">
+                
+            </div>
+            <p class="tag-label">Mot-clés : Rust, Go, C++, Vitesse d'exécution</p>
+        </article>
+        
+        <!-- Article 3: Applications et Scénarios concrets -->
+        <article class="veille-card">
+            <h3>💡 Utilisation dans les Applications Métiers</h3>
+            <p>
+                Pour le BTS SIO SLAM, Wasm ouvre des portes pour :
+                <ul>
+                    <li>L'exécution de code existant (legacy) en environnement web.</li>
+                    <li>Les applications de bureau (Desktop) utilisant des frameworks comme Electron.</li>
+                    <li>Le Cloud Computing (Wasm hors du navigateur) pour des fonctions serverless légères et rapides.</li>
+                </ul>
+            </p>
+            <p class="tag-label">Application : Figma, AutoCAD, Serverless Functions</p>
+        </article>
+
+        <!-- Article 4: Sources et suivi -->
+        <article class="veille-card">
+            <h3>🔗 Sources et Outils de Veille</h3>
+            <p>
+                J'utilise principalement les sources suivantes pour suivre l'évolution de WebAssembly :
+                <ul>
+                    <li>**MDN Web Docs** : Documentation technique et tutoriels.</li>
+                    <li>**Hacker News / Reddit (r/WebAssembly)** : Pour les discussions et annonces de projets.</li>
+                    <li>**Le site officiel Wasm** : Pour les propositions de standardisation et mises à jour du consortium.</li>
+                </ul>
+            </p>
+            <p class="tag-label">Méthodologie : Curation, Agrégation RSS</p>
+        </article>
+
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Souf Abdjahi-Dine | Portfolio BTS SIO</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
