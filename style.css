@@ -3,24 +3,20 @@
 /* ==================================================================== */
 
 :root {
-    /* Couleurs du Thème */
-    --color-primary: #2196F3;        /* Vert vif (Liens, accents) */
-    --color-primary-dark: white;   /* Vert foncé (Hover) */
-    --color-accent-blue: #2196F3;    /* Bleu pour SLAM */
-    --color-accent-green: #4CAF50;   /* Vert pour SISR */
-    
-    /* Couleurs du Thème Sombre */
-    --bg-dark-primary: #1e1e2f;      /* Arrière-plan principal (body, contenu accordéon) */
-    --bg-dark-secondary: #27293d;    /* Arrière-plan secondaire (Nav, cartes, titres accordéon) */
-    --bg-dark-tertiary: #151523;     /* Arrière-plan pied de page */
-    --bg-dark-list: #3c3f59;         /* Fond des éléments de liste et séparateurs sombres */
-    --color-text-light: #f1f1f9;     /* Texte clair principal */
-    --color-text-muted: #b0b0c5;     /* Texte gris/sourdine */
-    --color-border-dark: var(--bg-dark-list); /* Bordures de séparation */
-    
-    /* Typographie */
+    --color-primary: #778ea5;
+    --color-primary-dark: #778ea5;
+
+    --bg-dark-primary: #ffffff;
+    --bg-dark-secondary: #f5f7fa;
+    --bg-dark-tertiary: #eaeaea;
+    --bg-dark-list: #f0f0f0;
+
+    --color-text-light: #1a1a1a;
+    --color-text-muted: #555555;
+    --color-border-dark: #dddddd;
+
     --font-family: 'Inter', sans-serif;
-    --shadow-base: rgba(0, 0, 0, 0.4);
+    --shadow-base: rgba(0, 0, 0, 0.08);
 }
 
 * {
@@ -29,23 +25,19 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: var(--font-family);
     background-color: var(--bg-dark-primary);
     color: var(--color-text-light);
     line-height: 1.6;
-    scroll-behavior: smooth;
 }
 
-a {
-    color: var(--color-primary);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
 
 a:hover {
     color: var(--color-primary-dark);
 }
+
 
 section {
     padding: 80px 5%;
@@ -55,27 +47,24 @@ section {
 
 section h2 {
     text-align: center;
-    font-size: 2.8rem;
-    font-weight: 800;
-    margin-bottom: 60px;
-    color: var(--color-text-light);
+    font-size: 2.5rem;
+    margin-bottom: 50px;
 }
 
-/* --- NAVIGATION FIXE --- */
+/* NAV */
 nav {
-    background-color: var(--bg-dark-secondary);
+    background-color: white;
     padding: 15px 30px;
-    box-shadow: 0 4px 10px var(--shadow-base);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
-    z-index: 1000;
 }
 
 .menu {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 .menu a {
@@ -146,7 +135,7 @@ footer {
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(74, 222, 128, 0.6);
+    box-shadow: 0 8px 20px rgba(146, 178, 158, 0.6);
 }
 
 .btn-secondary {
