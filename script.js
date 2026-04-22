@@ -1,90 +1,98 @@
 /**
- * GESTION DES CARROUSELS SWIPER
- * Utilisation d'une configuration commune pour plus de clarté
+ * ===============================
+ * SWIPER GLOBAL (FIX PROPRE)
+ * ===============================
  */
-const commonConfig = (selector) => ({
-    loop: true,
-    navigation: {
-        nextEl: `${selector} .swiper-button-next`,
-        prevEl: `${selector} .swiper-button-prev`,
-    },
-    pagination: {
-        el: `${selector} .swiper-pagination`,
-        clickable: true,
-    },
-    // Important pour que le slider se recalcule quand l'accordéon s'ouvre
-    observer: true,
-    observeParents: true,
-});
 
-// Initialisation des instances pour chaque projet
-new Swiper('.mySwiper1', commonConfig('.mySwiper1'));
-new Swiper('.mySwiper2', commonConfig('.mySwiper2'));
-new Swiper('.mySwiper3', commonConfig('.mySwiper3')); // Congrès
-new Swiper('.mySwiper4', commonConfig('.mySwiper4')); // Séminaire API
-new Swiper('.mySwiper5', commonConfig('.mySwiper5')); // Symfony (si utilisé)
-new Swiper('.mySwiper6', commonConfig('.mySwiper6')); // Projet National ACC
-new Swiper('.mySwiperStage', commonConfig('.mySwiperStage'));
+document.addEventListener("DOMContentLoaded", () => {
 
-/**
- * GESTION DE L'ACCORDÉON
- */
-const items = document.querySelectorAll('.accordion-item');
+    document.querySelectorAll('.swiper').forEach((container) => {
 
-items.forEach(item => {
-    const btn = item.querySelector('.accordion-title');
-    const content = item.querySelector('.accordion-content');
+        const nextBtn = container.querySelector('.swiper-button-next');
+        const prevBtn = container.querySelector('.swiper-button-prev');
+        const pagination = container.querySelector('.swiper-pagination');
 
-    btn.addEventListener('click', () => {
-        const isOpen = btn.classList.contains('active');
+        new Swiper(container, {
+            loop: true,
 
-        // Fermer tous les autres accordéons
-        document.querySelectorAll('.accordion-title').forEach(b => b.classList.remove('active'));
-        document.querySelectorAll('.accordion-content').forEach(c => {
-            c.style.maxHeight = null;
-            c.classList.remove('open');
+            navigation: (nextBtn && prevBtn) ? {
+                nextEl: nextBtn,
+                prevEl: prevBtn,
+            } : false,
+
+            pagination: pagination ? {
+                el: pagination,
+                clickable: true,
+            } : false,
         });
 
-        // Si l'élément cliqué n'était pas ouvert, on l'ouvre
-        if (!isOpen) {
-            btn.classList.add('active');
-            // scrollHeight permet d'adapter la hauteur au contenu réel
-            content.style.maxHeight = content.scrollHeight + "px";
-            content.classList.add('open');
-            
-            // Petit bonus : après l'animation, on passe en 'max-height: none' 
-            // pour que le Swiper puisse s'afficher sans être coupé
-            setTimeout(() => {
-                if(content.classList.contains('open')) {
-                    content.style.maxHeight = "none";
-                }
-            }, 400); 
-        }
     });
+
 });
+
 
 /**
- * BONUS : MISE EN SURBRILLANCE DU MENU ACTIF
+ * ===============================
+ * MENU ACTIF (NAVIGATION SCROLL)
+ * ===============================
  */
-const sections = document.querySelectorAll('main section');
-const navLi = document.querySelectorAll('header nav .menu li');
 
-window.addEventListener('scroll', () => {
-    let current = '';
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (pageYOffset >= sectionTop - 100) { 
-            current = section.getAttribute('id');
-        }
+const sections = document.querySelectorAll('section');
+const navLi = document.querySelectorAll('nav .menu li');
+
+if (sections.length > 0 && navLi.length > 0) {
+    window.addEventListener('scroll', () => {
+
+        let current = '';
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+
+            if (window.pageYOffset >= sectionTop - 150) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLi.forEach(li => {
+            li.classList.remove('active');
+
+            const link = li.querySelector('a').getAttribute('href');
+
+            if (current && link.includes(current)) {
+                li.classList.add('active');
+            }
+        });
+
     });
+}
 
-    navLi.forEach(li => {
-        li.classList.remove('active');
-        const link = li.querySelector('a').getAttribute('href');
-        if (current && link.includes(current)) {
-            li.classList.add('active');
-        }
+
+/**
+ * ===============================
+ * DRAWER (PAGE PROJETS UNIQUEMENT)
+ * ===============================
+ */
+
+const toggleButtons = document.querySelectorAll(".btn-toggle-details");
+
+if (toggleButtons.length > 0) {
+    toggleButtons.forEach(btn => {
+
+        btn.addEventListener("click", () => {
+
+            const drawer = btn.nextElementSibling;
+
+            if (!drawer) return;
+
+            document.querySelectorAll(".project-details-drawer").forEach(d => {
+                if (d !== drawer) {
+                    d.classList.remove("open");
+                }
+            });
+
+            drawer.classList.toggle("open");
+
+        });
+
     });
-});
-
+}

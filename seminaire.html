@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Mes Projets | Souf Abdjahi-Dine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+
+<nav>
+    <ul class="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="profil.html">Profil </a></li>
+        <li class="active"><a href="projets.html">Projets</a></li>
+        <li><a href="stage.html">Stages</a></li>
+        <li><a href="veille.html">Veille</a></li>
+        <li><a href="competence.html">Compétences</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="project-page">
+    <h2 class="main-title">Projet Séminaire</h2>
+    <h3>Objectif du projet :</h3>
+            <p>
+                Développement d'une solution complète pour la gestion des inscriptions aux conférences du Centre de congrès de Limoges. 
+                Le projet se divise en deux parties : la création d'une <strong>API REST</strong> sécurisée et d'un <strong>site web dynamique</strong> consommant cette API.
+            </p>
+
+            <h3>Outils et Architecture :</h3>
+            <ul>
+                <li><strong>Backend :</strong> PHP 8 (Architecture MVC & POO)</li>
+                <li><strong>API :</strong> REST / Format JSON</li>
+                <li><strong>Base de données :</strong> MySQL (PDO)</li>
+                <li><strong>Communication :</strong> Bibliothèque cURL pour la consommation de l'API</li>
+            </ul>
+
+            <hr>
+
+            <h3>Mes missions :</h3>
+            <p>
+                <strong>1. Développement de l'API REST :</strong> 
+                Conception des points d'entrée (endpoints) pour récupérer les conférences, gérer l'authentification des participants et enregistrer les inscriptions en base de données.
+            </p>
+            
+
+[Image of REST API architecture diagram]
+
+            <p>
+                <strong>2. Consommation de l'API (Client Web) :</strong> 
+                Implémentation d'un <em>ApiClient</em> en PHP pour effectuer des requêtes HTTP (GET/POST). Développement du système de session pour maintenir la connexion utilisateur.
+            </p>
+            <p>
+                <strong>3. Interface Utilisateur :</strong> 
+                Création de vues dynamiques permettant de filtrer les conférences par séminaire et de s'y inscrire en un clic.
+            </p>
+
+            <hr>
+
+            <h3>Fonctionnalités clés :</h3>
+            <ul>
+                <li>Authentification sécurisée via l'API</li>
+                <li>Consultation du programme par séminaire</li>
+                <li>Inscription et désinscription aux conférences</li>
+                <li>Consultation de l'historique personnel des inscriptions</li>
+            </ul>
+
+            <div class="swiper mySwiper4">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/seminaire/seminaire1.png" alt="Interface de connexion"></div>
+                    <div class="swiper-slide"><img src="img/seminaire/seminaire2.png" alt="Liste des conférences"></div>
+                    <div class="swiper-slide"><img src="img/seminaire/seminaire3.png" alt="Détail d'une conférence"></div>
+                    <div class="swiper-slide"><img src="img/seminaire/seminaire4.png" alt="Confirmation d'inscription"></div>
+                    <div class="swiper-slide"><img src="img/seminaire/seminaire5.png" alt="Historique des inscriptions"></div>
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+</section>
+<footer>
+    <p>&copy; 2025 Souf Abdjahi-Dine | Portfolio BTS SIO</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

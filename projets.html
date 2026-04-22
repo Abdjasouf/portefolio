@@ -15,400 +15,91 @@
         <li><a href="index.html">Accueil</a></li>
         <li><a href="profil.html">Profil </a></li>
         <li class="active"><a href="projets.html">Projets</a></li>
-        <li><a href="documentation.html">Documentation</a></li>
-        <li><a href="veille.html">Veille</a></li>
         <li><a href="stage.html">Stages</a></li>
+        <li><a href="veille.html">Veille</a></li>
         <li><a href="competence.html">Compétences</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
 </nav>
 
 <section class="projects-container">
-    <h2>Mes Projets</h2>
+    <h2 class="main-title">Mes Projets</h2>
 
-    <!-- Projet 1 -->
-<div class="accordion">
-    <div class="accordion-item">
-        <button class="accordion-title">
-            Projet Karaté
-        </button>
-
-        <div class="accordion-content">
-            <h3>📌 Objectif du projet :</h3>
-            <p>
-                Concevoir une application de gestion de compétitions de Karaté (kata) dans le contexte de la M2L,
-                en utilisant Visual Studio (C#), une base de données MySQL, et ADO.NET pour les interactions.
-            </p>
-
-            <h3>🛠️ Outils utilisés :</h3>
-            <ul>
-                <li>Langage : C#</li>
-                <li>Base de données : MySQL</li>
-                <li>Logiciel : Visual Studio Enterprise 2022</li>
-            </ul>
-
-            <hr>
-
-            <h3>Étapes attendues :</h3>
-            <ul>
-                <li>Ajouter</li>
-                <li>Modifier / Supprimer</li>
-                <li>Consulter / Afficher</li>
-            </ul>
-
-            <hr>
-
-            <h3>Mes missions :</h3>
-            <p>
-                <strong>T1.1 Gestion des membres :</strong> Cette tâche doit permettre la création, la modification et 
-                la suppression d’un membre à partir d’un formulaire. Il faudra réaliser la maquette de ce formulaire, 
-                le faire valider par le chef de projet avant de commencer le codage.
-            </p>
-            <p>
-                <strong>T1.4 Consultation des licences :</strong> Cette tâche doit permettre l’affichage de la licence.
-            </p>
-
-            <div class="swiper mySwiper1">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="img/ajouter.png" alt="karate 1"></div>
-                    <div class="swiper-slide"><img src="img/modifier.png" alt="karate 2"></div>
-                    <div class="swiper-slide"><img src="img/consulter.png" alt="karate 3"></div>
-                </div>
-
-                <!-- Boutons et pagination Swiper -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
+    <div class="projects-grid">
+        
+        <article class="project-card">
+            <div class="project-header">
+                <img src="img/karateimage.webp" alt="Aperçu Projet Karaté">
             </div>
-        </div>
-    </div>
-</div>
-
-
-    <!-- Projet 2 -->
-<div class="accordion">
-    <div class="accordion-item">
-        <button class="accordion-title">Projet Resto</button>
-        <div class="accordion-content">
-
-            <h3>📌 Objectif du projet :</h3>
-            <p>
-                Compléter un site web de gestion de restaurants déjà partiellement développé,
-                en y ajoutant plusieurs fonctionnalités pour les utilisateurs connectés.
-            </p>
-
-            <h3>🛠️ Outils utilisés :</h3>
-            <ul>
-                <li>Langages : PHP, HTML/CSS</li>
-                <li>Base de données : MySQL</li>
-                <li>Logiciels : Visual Studio Code, XAMPP</li>
-            </ul>
-
-            <hr>
-
-            <h3>Fonctions ajoutées :</h3>
-            <ul>
-                <li>🔍 Recherche de restaurants (nom, adresse, type de cuisine)</li>
-                <li>🔐 Connexion / Déconnexion d’un utilisateur</li>
-                <li>❤️ Aimer / ne plus aimer un restaurant</li>
-                <li>⭐ Noter et commenter un restaurant</li>
-            </ul>
-
-            <hr>
-
-            <h3>Mes missions :</h3>
-            <p>
-                • Ajout et modification de contrôleurs (recherche, connexion, aimer, critiquer)<br>
-                • Création de fonctions PHP dans les modèles (requêtes SQL avec filtres dynamiques)<br>
-                • Intégration de vues conditionnelles selon l’état de connexion de l’utilisateur<br>
-                • Gestion des interactions utilisateur (aimer, noter, critiquer)
-            </p>
-
-            <div class="swiper mySwiper2">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="img/1.resto.png" alt="resto 1"></div>
-                    <div class="swiper-slide"><img src="img/2.resto.png" alt="resto 2"></div>
-                    <div class="swiper-slide"><img src="img/3.resto.png" alt="resto 3"></div>
-                    <div class="swiper-slide"><img src="img/4.resto.png" alt="resto 4"></div>
-                    <div class="swiper-slide"><img src="img/5.resto.png" alt="resto 5"></div>
-                    <div class="swiper-slide"><img src="img/6.resto.png" alt="resto 6"></div>
-                    <div class="swiper-slide"><img src="img/7.resto.png" alt="resto 7"></div>
-                    <div class="swiper-slide"><img src="img/8.resto.png" alt="resto 8"></div>
-                    <div class="swiper-slide"><img src="img/9.resto.png" alt="resto 9"></div>
-                    <div class="swiper-slide"><img src="img/10.resto.png" alt="resto 10"></div>
-                    <div class="swiper-slide"><img src="img/11.resto.png" alt="resto 11"></div>
-                </div>
-
-                <!-- Boutons et pagination -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
+            <div class="project-body">
+                <span class="tag">C# / MySQL</span>
+                <h3>Projet Karaté</h3>
+                <p>Gestion de membres et licences (M2L).</p>
+                <a href="karate.html" class="btn-link">Détails du projet →</a>
             </div>
+        </article>
 
-        </div>
-    </div>
-</div>
-
-<!-- Projet 3 -->
-<div class="accordion">
-    <div class="accordion-item">
-        <button class="accordion-title">
-            Projet Congrès
-        </button>
-
-        <div class="accordion-content">
-
-            <h3>📌 Contexte :</h3>
-            <p>
-                Application web de gestion du congrès national des Maisons des Ligues (ANALIM) — gestion des inscriptions, 
-                sessions, activités, facturation et règlements. Réalisé en PHP orienté objet (MVC) avec une base MySQL.
-            </p>
-
-            <h3>🛠️ Outils et architecture :</h3>
-            <ul>
-                <li>Langage : PHP (POO)</li>
-                <li>Architecture : MVC (Controllers / Models / Views)</li>
-                <li>Base de données : MySQL (modélisation MCD → MLD)</li>
-                <li>Accès base : PDO</li>
-                <li>Gestion de version : Git</li>
-            </ul>
-
-            <hr>
-
-            <h3>🎯 Objectifs de la mission 4 (T1.5, T2.4) :</h3>
-            <ul>
-                <li>
-                    <strong>T1.5 — Gestion des organismes payeurs :</strong> 
-                    CRUD complet (Créer, Modifier, Supprimer, Lister) des organismes 
-                    : entreprises, administrations, universités, lycées.
-                </li>
-
-                <li>
-                    <strong>T2.4 — Règlements :</strong> 
-                    Enregistrement du règlement d'une facture existante, association d’un organisme payeur si nécessaire,
-                    impression d’un ticket récapitulatif (montant, facture, payeur, congressiste) 
-                    et possibilité d’annuler le règlement.
-                </li>
-            </ul>
-
-            <hr>
-
-            <h3>🖼️ Captures :</h3>
-            <div class="swiper mySwiper4">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="img/" alt="Liste des organismes payeurs"></div>
-                    <div class="swiper-slide"><img src="img/" alt="Formulaire organisme payeur"></div>
-                    <div class="swiper-slide"><img src="img/" alt="Formulaire de règlement"></div>
-                    <div class="swiper-slide"><img src="img/" alt="Ticket de règlement imprimable"></div>
-                </div>
-
-                <!-- Boutons et pagination -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
+        <article class="project-card">
+            <div class="project-header">
+                <img src="img/restoranrimg.jpg" alt="Aperçu Projet Resto">
             </div>
-
-        </div>
-    </div>
-</div>
-
-<!-- Projet 4 -->
-<div class="accordion">
-    <div class="accordion-item">
-        <button class="accordion-title">
-            Projet Séminaire (API REST & MVC)
-        </button>
-
-        <div class="accordion-content">
-            <h3>📌 Objectif du projet :</h3>
-            <p>
-                Développement d'une solution complète pour la gestion des inscriptions aux conférences du Centre de congrès de Limoges. 
-                Le projet se divise en deux parties : la création d'une <strong>API REST</strong> sécurisée et d'un <strong>site web dynamique</strong> consommant cette API.
-            </p>
-
-            <h3>🛠️ Outils et Architecture :</h3>
-            <ul>
-                <li><strong>Backend :</strong> PHP 8 (Architecture MVC & POO)</li>
-                <li><strong>API :</strong> REST / Format JSON</li>
-                <li><strong>Base de données :</strong> MySQL (PDO)</li>
-                <li><strong>Communication :</strong> Bibliothèque cURL pour la consommation de l'API</li>
-            </ul>
-
-            <hr>
-
-            <h3>Mes missions :</h3>
-            <p>
-                <strong>1. Développement de l'API REST :</strong> 
-                Conception des points d'entrée (endpoints) pour récupérer les conférences, gérer l'authentification des participants et enregistrer les inscriptions en base de données.
-            </p>
-            
-
-[Image of REST API architecture diagram]
-
-            <p>
-                <strong>2. Consommation de l'API (Client Web) :</strong> 
-                Implémentation d'un <em>ApiClient</em> en PHP pour effectuer des requêtes HTTP (GET/POST). Développement du système de session pour maintenir la connexion utilisateur.
-            </p>
-            <p>
-                <strong>3. Interface Utilisateur :</strong> 
-                Création de vues dynamiques permettant de filtrer les conférences par séminaire et de s'y inscrire en un clic.
-            </p>
-
-            <hr>
-
-            <h3>Fonctionnalités clés :</h3>
-            <ul>
-                <li>🔐 Authentification sécurisée via l'API</li>
-                <li>📅 Consultation du programme par séminaire</li>
-                <li>✅ Inscription et désinscription aux conférences</li>
-                <li>📄 Consultation de l'historique personnel des inscriptions</li>
-            </ul>
-
-            <div class="swiper mySwiper4">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="img/seminaire-accueil.png" alt="Accueil Séminaire"></div>
-                    <div class="swiper-slide"><img src="img/seminaire-api.png" alt="Test API Postman"></div>
-                    <div class="swiper-slide"><img src="img/seminaire-liste.png" alt="Liste des conférences"></div>
-                    <div class="swiper-slide"><img src="img/seminaire-profil.png" alt="Mes inscriptions"></div>
-                </div>
-
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
+            <div class="project-body">
+                <span class="tag">PHP / MVC</span>
+                <h3>Projet Resto</h3>
+                <p>Site de gestion de restaurants : recherche, favoris et système de notation.</p>
+                <a href="resto.html" class="btn-link">Détails du projet →</a>
             </div>
-        </div>
-    </div>
-</div>
+        </article>
 
-<!-- Projet 5 -->
-
-<div class="accordion">
-    <div class="accordion-item">
-        <button class="accordion-title">
-            Application Web Framework Symfony
-        </button>
-
-        <div class="accordion-content">
-            <h3>📌 Objectif du projet :</h3>
-            <p>
-                Développement d'une application métier pour la société "Le P'tit Jardinier". 
-                L'enjeu était de passer d'un développement PHP classique à une architecture robuste sous <strong>Symfony 7</strong>, incluant la gestion complète d'un catalogue et d'un système de devis.
-            </p>
-
-            <h3>🛠️ Architecture et Sécurité :</h3>
-            <ul>
-                <li><strong>Framework :</strong> Symfony (Moteur Twig, Composant Security)</li>
-                <li><strong>ORM :</strong> Doctrine (Gestion de la base de données en objets)</li>
-                <li><strong>Outils :</strong> Symfony CLI, Composer, PHP 8.2+</li>
-                <li><strong>Sécurité :</strong> Hachage des mots de passe, Authentification via Firewalls</li>
-            </ul>
-
-            <hr>
-
-            <h3>Mes missions :</h3>
-            <p>
-                <strong>1. Modélisation et ORM :</strong> 
-                Création des entités (User, Devis, Haie) avec le <em>MakerBundle</em>. Génération des migrations pour synchroniser le modèle objet avec la base de données MySQL.
-            </p>
-            
-            <p>
-                <strong>2. Système d'Authentification :</strong> 
-                Mise en place complète du système de sécurité : formulaire d'inscription (<em>RegistrationForm</em>), page de connexion sécurisée avec protection CSRF et gestion de la déconnexion.
-            </p>
-            <p>
-                <strong>3. Contrôle d'Accès (RBAC) :</strong> 
-                Hiérarchisation des droits utilisateurs. Utilisation des <em>Access Controls</em> et des attributs <code>#[IsGranted]</code> pour réserver la gestion des tarifs aux administrateurs (ROLE_ADMIN).
-            </p>
-
-            <hr>
-
-            <h3>Compétences acquises :</h3>
-            <ul>
-                <li>🏗️ Maîtrise du workflow Symfony (Route -> Contrôleur -> Entité -> Vue)</li>
-                <li>📝 Génération et validation de formulaires complexes</li>
-                <li>🔐 Sécurisation d'URL et gestion des sessions utilisateurs (App.user)</li>
-                <li>🚀 Utilisation des commandes CLI pour automatiser le développement (CRUD)</li>
-            </ul>
-
-            <div class="swiper mySwiper5">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="img/" alt="Interface de connexion"></div>
-                    <div class="swiper-slide"><img src="img/" alt="Tableau de bord admin"></div>
-                    <div class="swiper-slide"><img src="img/" alt="Formulaire de devis"></div>
-                    <div class="swiper-slide"><img src="img/" alt="Aperçu du code Controller"></div>
-                </div>
-
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
+        <article class="project-card">
+            <div class="project-header">
+                <img src="img/congresimg.webp" alt="Aperçu Projet Congrès">
             </div>
-        </div>
-    </div>
-</div>
-
-<!-- Projet 6 -->
-
-<div class="accordion">
-    <div class="accordion-item">
-        <button class="accordion-title">
-            Projet National : E-sport & Défense (ACC)
-        </button>
-
-        <div class="accordion-content">
-            <h3>📌 Contexte : "Aux Claviers Citoyens"</h3>
-            <p>
-                Mission de développement d'une solution numérique pour la pratique du e-sport en environnement militaire. 
-                L'objectif est de fusionner compétition virtuelle et effets réels via des objets connectés, tout en renforçant la cohésion et le leadership des troupes.
-            </p>
-
-            <h3>🛠️ Environnement Technique :</h3>
-            <ul>
-                <li><strong>Plateforme :</strong> Application Mobile (Consommation d'API REST)</li>
-                <li><strong>Backend / API :</strong> Authentification OAuth2 (Bearer Token)</li>
-                <li><strong>Collaboration :</strong> Interopérabilité avec les BTS CIEL (IoT) et SIO-SISR (Infrastructure)</li>
-                <li><strong>Localisation :</strong> Phase finale prévue sur la Base Aérienne 721 de Rochefort</li>
-            </ul>
-
-            <hr>
-
-            <h3>Ma Mission : Gestion des Équipes 🛡️</h3>
-            <p>
-                J'ai été responsable du module de gestion des compétiteurs. Ce module est crucial pour structurer les tournois et assurer le suivi des performances.
-            </p>
-            
-            
-
-            <h3>Fonctionnalités développées :</h3>
-            <ul>
-                <li><strong>CRUD Équipes :</strong> Création, modification (nomination) et retrait d'équipes dans un tournoi spécifique via l'API.</li>
-                <li><strong>Consommation de l'API :</strong> Implémentation des requêtes sécurisées pour lister les équipes et leurs points accumulés.</li>
-                <li><strong>Affichage Dynamique :</strong> Visualisation précise des détails d'une équipe (ID, Nom, Score) pour les organisateurs.</li>
-                <li><strong>Expérience Utilisateur (Front-end) :</strong> Design de l'interface mobile pour une gestion fluide sur le terrain.</li>
-            </ul>
-
-            <hr>
-
-            <h3>🎯 Défis relevés :</h3>
-            <ul>
-                <li>🔐 <strong>Sécurité :</strong> Intégration du jeton d'accès (Passport numérique) pour chaque requête API.</li>
-                <li>🤝 <strong>Travail d'équipe :</strong> Coordination avec les développeurs des modules "Matchs" et "Tournois" pour garantir la cohérence des données.</li>
-            </ul>
-
-            <div class="swiper mySwiper6">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="img/acc-teams-list.png" alt="Liste des équipes"></div>
-                    <div class="swiper-slide"><img src="img/acc-create-team.png" alt="Création d'une équipe"></div>
-                    <div class="swiper-slide"><img src="img/acc-api-test.png" alt="Tests de l'API Team"></div>
-                    <div class="swiper-slide"><img src="img/acc-rochefort.png" alt="Base Aérienne Rochefort"></div>
-                </div>
-
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
+            <div class="project-body">
+                <span class="tag">PHP POO / Git</span>
+                <h3>Projet Congrès</h3>
+                <p>Gestion des inscriptions (ANALIM) : sessions, facturation et règlements.</p>
+                <a href="congres.html" class="btn-link">Détails du projet →</a>
             </div>
-        </div>
+        </article>
+
+        <article class="project-card">
+            <div class="project-header">
+                <img src="img/seminaireimg.jpg" alt="Aperçu Projet Séminaire">
+            </div>
+            <div class="project-body">
+                <span class="tag">API REST / JSON</span>
+                <h3>Projet Séminaire</h3>
+                <p>Solution complète de gestion d'inscriptions via une API REST sécurisée.</p>
+                <a href="seminaire.html" class="btn-link">Détails du projet →</a>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <div class="project-header">
+                <img src="img/jardinier.webp" alt="Aperçu Projet Symfony">
+            </div>
+            <div class="project-body">
+                <span class="tag">Symfony 7 / Doctrine</span>
+                <h3>App Web Symfony</h3>
+                <p>Application métier "Le P'tit Jardinier" avec gestion de devis.</p>
+                <a href="jardinier.html" class="btn-link">Détails du projet →</a>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <div class="project-header">
+                <img src="img/AuxClaviersCitoyens.png" alt="Aperçu Projet National ACC">
+            </div>
+            <div class="project-body">
+                <span class="tag">Mobile / OAuth2</span>
+                <h3>Projet National ACC</h3>
+                <p>Module de gestion d'équipes E-sport pour l'armée (Base de Rochefort).</p>
+                <a href="acc.html" class="btn-link">Détails du projet →</a>
+            </div>
+        </article>
+
     </div>
-</div>
 </section>
 
 <footer>

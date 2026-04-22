@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Mes Projets | Souf Abdjahi-Dine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+
+<nav>
+    <ul class="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="profil.html">Profil </a></li>
+        <li class="active"><a href="projets.html">Projets</a></li>
+        <li><a href="stage.html">Stages</a></li>
+        <li><a href="veille.html">Veille</a></li>
+        <li><a href="competence.html">Compétences</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="project-page">
+    <h2 class="main-title">Projet "Le P'tit Jardinier"</h2>
+    <h3>Objectif du projet :</h3>
+            <p>
+                Développement d'une application métier pour la société "Le P'tit Jardinier". 
+                L'enjeu était de passer d'un développement PHP classique à une architecture robuste sous <strong>Symfony 7</strong>, incluant la gestion complète d'un catalogue et d'un système de devis.
+            </p>
+
+            <h3>Architecture et Sécurité :</h3>
+            <ul>
+                <li><strong>Framework :</strong> Symfony (Moteur Twig, Composant Security)</li>
+                <li><strong>ORM :</strong> Doctrine (Gestion de la base de données en objets)</li>
+                <li><strong>Outils :</strong> Symfony CLI, Composer, PHP 8.2+</li>
+                <li><strong>Sécurité :</strong> Hachage des mots de passe, Authentification via Firewalls</li>
+            </ul>
+
+            <hr>
+
+            <h3>Mes missions :</h3>
+            <p>
+                <strong>1. Modélisation et ORM :</strong> 
+                Création des entités (User, Devis, Haie) avec le <em>MakerBundle</em>. Génération des migrations pour synchroniser le modèle objet avec la base de données MySQL.
+            </p>
+            
+            <p>
+                <strong>2. Système d'Authentification :</strong> 
+                Mise en place complète du système de sécurité : formulaire d'inscription (<em>RegistrationForm</em>), page de connexion sécurisée avec protection CSRF et gestion de la déconnexion.
+            </p>
+            <p>
+                <strong>3. Contrôle d'Accès (RBAC) :</strong> 
+                Hiérarchisation des droits utilisateurs. Utilisation des <em>Access Controls</em> et des attributs <code>#[IsGranted]</code> pour réserver la gestion des tarifs aux administrateurs (ROLE_ADMIN).
+            </p>
+
+            <hr>
+
+            <h3>Compétences acquises :</h3>
+            <ul>
+                <li>Maîtrise de Symfony (Route -> Contrôleur -> Entité -> Vue)</li>
+                <li>Génération et validation de formulaires complexes</li>
+                <li>Sécurisation d'URL et gestion des sessions utilisateurs (App.user)</li>
+                <li>Utilisation des commandes CLI pour automatiser le développement (CRUD)</li>
+            </ul>
+
+            <div class="swiper mySwiper5">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/jardinier/jardinier1.png" alt="Interface de connexion"></div>
+                    <div class="swiper-slide"><img src="img/jardinier/jardinieradmin1.png"></div>
+                    <div class="swiper-slide"><img src="img/jardinier/jardinieradmin2.png"></div>
+                    <div class="swiper-slide"><img src="img/jardinier/jardinieradmin3.png"></div>
+                    <div class="swiper-slide"><img src="img/jardinier/jardinieradmin4.png"></div>
+                    <div class="swiper-slide"><img src="img/jardinier/jardinieradmin5.png"></div>
+                    <div class="swiper-slide"><img src="img/jardinier/jardinieruser1.png"></div>
+                    <div class="swiper-slide"><img src="img/jardinier/jardinieruser2.png"></div>
+                    <div class="swiper-slide"><img src="img/jardinier/jardinieruser3.png"></div>
+                    <div class="swiper-slide"><img src="img/jardinier/jardinieruser4.png"></div>
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+</section>
+<footer>
+    <p>&copy; 2025 Souf Abdjahi-Dine | Portfolio BTS SIO</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

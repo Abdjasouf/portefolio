@@ -58,6 +58,7 @@ nav {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
+    z-index: 1000; /* 🔥 IMPORTANT */
 }
 
 .menu {
@@ -260,197 +261,224 @@ footer {
 /* 3. PAGES PROJETS / STAGE (STRUCTURE ACCORDÉON BOUTON/DIV) */
 /* ==================================================================== */
 
-.projects-container, .cv-container {
-    max-width: 900px;
+.projects-container {
+    padding: 80px 5%;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
-/* Harmonisation du bouton de téléchargement PDF */
-.btn-download, .btn-download-modern {
-    background-color: var(--color-primary);
-    color: var(--bg-dark-primary);
-    box-shadow: 0 6px 15px rgba(74, 222, 128, 0.4);
-    padding: 12px 30px;
-    border-radius: 8px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    display: inline-block;
+.projects-container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    font-weight: 800;
 }
-.btn-download:hover, .btn-download-modern:hover {
-    background-color: var(--color-primary-dark);
-    transform: translateY(-2px);
-}
-
-/* Conteneur de l'accordéon */
-.projects-accordion {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.accordion-item {
-    background-color: var(--bg-dark-secondary);
-    margin-bottom: 20px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Titre (Bouton cliquable) */
-.accordion-title {
-    width: 100%;
-    padding: 20px 25px;
-    text-align: left;
-    background: var(--bg-dark-secondary);
-    color: var(--color-text-light);
-    font-size: 1.2rem;
-    font-weight: 700;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    border-bottom: 1px solid var(--color-border-dark);
-    position: relative;
-    transition: background 0.3s ease;
-}
-
-.accordion-title:hover {
-    background: var(--bg-dark-list);
-}
-
-/* Symbole + / - */
-.accordion-title::after {
-    content: "+";
-    position: absolute;
-    right: 25px;
-    font-size: 1.5rem;
-    transition: transform 0.3s ease;
-}
-
-/* Contenu */
-.accordion-content {
+.project-details-drawer {
     max-height: 0;
     overflow: hidden;
-    background-color: var(--bg-dark-primary);
-    padding: 0 25px;
-    transition: max-height 0.4s ease, padding 0.3s ease;
+    opacity: 0;
+    transition: all 0.4s ease;
 }
 
-/* Quand l’item est actif (ajouté par JS) */
-.accordion-item.active .accordion-content {
-    max-height: 3000px; /* Grande valeur pour ouvrir */
-    padding: 30px 25px;
+.project-details-drawer.open {
+    max-height: 2000px;
+    opacity: 1;
 }
 
-.accordion-item.active .accordion-title::after {
-    content: "-";
-    transform: rotate(90deg);
-}
-
-/* Styles internes au contenu du projet */
-
-.accordion-content h3 {
-    color: var(--color-primary);
-    margin-top: 20px;
-    margin-bottom: 15px;
-    font-size: 1.3rem;
-}
-
-.accordion-content p {
-    color: var(--color-text-light);
-}
-
-.accordion-content ul {
-    list-style-type: none;
-    padding-left: 0;
-    margin-top: 10px;
-}
-
-.accordion-content ul li {
-    background: var(--bg-dark-list);
-    padding: 8px 15px;
-    border-radius: 5px;
-    margin-bottom: 8px;
-    color: var(--color-text-light);
-}
-
-.accordion-content hr {
-    border: none;
-    border-top: 1px solid var(--color-border-dark);
-    margin: 20px 0;
-}
-
-/* Style pour les images Swiper à l'intérieur de l'accordéon */
-.accordion-content img {
-    /* Changé de contain à cover pour remplir l'espace */
-    width: 100%;
-    height: 100%; /* Important: Assure que l'image remplit la hauteur du slide */
-    display: block;
-    margin: 0 auto; /* Centrer l'image */
-    border-radius: 10px;
-    object-fit: cover; /* Recadre légèrement si nécessaire pour remplir */
-}
-/* Ajout des styles Swiper spécifiques pour la hauteur */
-.swiper {
-    width: 100%;
-    /* Définir une hauteur fixe pour le carrousel. Ajustez cette valeur si nécessaire. */
-    height: 400px; 
-    margin: 20px auto; 
-    border-radius: 10px;
-    overflow: hidden;
-}
-.swiper-slide {
+.drawer-inner {
+    padding: 20px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.swiper-slide img {
-    /* Utiliser object-fit cover ici aussi, mais c'est déjà défini par .accordion-content img */
-    width: 100%; 
-    height: 100%;
-    object-fit: cover; 
+    flex-direction: column;
+    gap: 15px;
 }
 
+/* Conteneur principal en grille */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes de largeur égale */
+    gap: 30px;
+    padding: 20px 0;
+}
+
+/* La carte du projet */
+.project-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Aligne l'image en haut et le texte en bas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* En-tête de la carte (La Photo unique) */
+.project-header {
+    width: 100%;
+    height: 220px; /* Hauteur fixe pour aligner toutes les cartes */
+    overflow: hidden;
+    background-color: var(--bg-subtle);
+}
+
+.project-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Remplit l'espace sans déformer l'image */
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-header img {
+    transform: scale(1.05); /* Petit effet de zoom au survol */
+}
+
+/* Corps de la carte (Texte) */
+.project-body {
+    padding: 25px;
+    flex-grow: 1; /* Permet à la carte de s'étirer verticalement si besoin */
+    display: flex;
+    flex-direction: column;
+}
+.project-page {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+}
+.tag {
+    color: var(--color-accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.project-body h3 {
+    font-size: 1.4rem;
+    color: var(--color-text);
+    margin-bottom: 12px;
+}
+
+.project-body p {
+    font-size: 0.95rem;
+    color: var(--color-muted);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Lien de bas de carte */
+.btn-link {
+    margin-top: auto; /* Aligne le lien toujours tout en bas */
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+    display: inline-block;
+}
+
+.btn-link:hover {
+    color: #7e22ce;
+    text-decoration: underline;
+}
 
 /* ==================================================================== */
 /* 4. PAGE COMPÉTENCES (COMPETENCE.HTML) */
 /* ==================================================================== */
 
+.skills-section {
+    padding: 80px 20px;
+    text-align: center;
+    color: #111;
+}
+
+.skills-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.skills-subtitle {
+    opacity: 0.6;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+/* GRID */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 30px;
-    max-width: 900px;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
+/* CARD */
 .skill-card {
-    background-color: var(--bg-dark-secondary);
+    background: white;
+    border-radius: 20px;
     padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    transition: transform 0.3s ease, border 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.25s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
     border: 1px solid transparent;
 }
 
+/* hover clean */
 .skill-card:hover {
-    transform: translateY(-5px);
-    border: 1px solid var(--color-primary);
+    transform: translateY(-6px);
+    border-color: #3b82f6;
+    box-shadow: 0 12px 30px rgba(59, 130, 246, 0.15);
 }
 
+/* effet léger highlight */
+.skill-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(59, 130, 246, 0.08),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.skill-card:hover::before {
+    left: 100%;
+}
+
+/* IMAGE */
 .skill-card img {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     object-fit: contain;
     margin-bottom: 15px;
 }
 
-.skill-card p {
-    font-weight: 700;
-    color: var(--color-text-light);
-    font-size: 1.1em;
+/* TITRE */
+.skill-card h3 {
+    font-size: 1.1rem;
+    margin: 10px 0 5px;
+    color: #111;
 }
 
+/* TEXTE */
+.skill-card span {
+    font-size: 0.85rem;
+    color: #666;
+}
 
 /* ==================================================================== */
 /* 5. PAGE PROFIL (PROFIL.HTML) */
@@ -823,7 +851,6 @@ footer {
     margin-bottom: 30px;
 }
 
-
 /* ==================================================================== */
 /* 8. MEDIA QUERIES (RESPONSIVE) */
 /* ==================================================================== */
@@ -874,4 +901,210 @@ footer {
     .mission-details-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* ==================================================================== */
+/* SWIPER STYLES */
+/* ==================================================================== */
+
+.swiper {
+    width: 90%;
+    height: 100%; /* IMPORTANT : sinon invisible */
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--bg-dark-secondary);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* conteneur interne */
+.swiper-wrapper {
+    height: 100%;
+}
+
+/* slide */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+
+/* image */
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Garde l'image entière sans la couper */
+    background: #f0f0f0; /* Optionnel : un fond gris clair pour combler les vides */
+}
+
+/* navigation boutons */
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--color-primary);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* pagination */
+.swiper-pagination-bullet {
+    background: var(--color-primary);
+    opacity: 0.4;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.stage-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+    gap: 16px;
+}
+
+/* BASE BUTTON */
+.stage-btn {
+    position: relative;
+    padding: 14px 18px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    transition: all 0.25s ease;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+
+/* PREV (clean transparent, pas de blanc) */
+.stage-btn.prev {
+    color: #111;
+    background: rgb(231, 231, 231);
+}
+
+/* NEXT (gradient moderne) */
+.stage-btn.next {
+    background: linear-gradient(135deg, #6366f1, #3b82f6);
+    color: white;
+}
+
+/* HOVER */
+.stage-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* CLICK */
+.stage-btn:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+/* flèche simple */
+.stage-btn::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-right: 2px solid currentColor;
+    border-top: 2px solid currentColor;
+    transform: rotate(45deg);
+    display: inline-block;
+    margin-left: 6px;
+    opacity: 0.6;
+}
+
+.stage-btn.prev::after {
+    transform: rotate(-135deg);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .stage-navigation {
+        flex-direction: column;
+    }
+
+    .stage-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.veille-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+    align-items: stretch; /* Empêche les cartes de bouger indépendamment */
+}
+
+.veille-card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+    /* STABILISATEURS : Ajoute ces 3 lignes */
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateY(0); 
+    
+}
+
+.veille-card:hover {
+    /* Un mouvement de -5px est plus stable visuellement que -8px */
+    transform: translateY(-5px); 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+/* Couleurs par catégorie */
+.cyber { border-top: 4px solid #ff4d4d; }
+.dev { border-top: 4px solid #4da6ff; }
+.lang { border-top: 4px solid #4dff88; }
+
+.badge {
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+    align-self: flex-start;
+}
+
+.cyber .badge { background: #ff4d4d; }
+.dev .badge { background: #4da6ff; }
+.lang .badge { background: #4dff88; }
+
+.veille-card h3 {
+    margin: 10px 0;
+    font-size: 1.15rem;
+}
+
+.veille-card p {
+    flex-grow: 1; /* Pousse le bouton vers le bas pour un alignement parfait */
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.veille-card a {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: bold;
 }

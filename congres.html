@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Mes Projets | Souf Abdjahi-Dine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+
+
+<nav>
+    <ul class="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="profil.html">Profil </a></li>
+        <li class="active"><a href="projets.html">Projets</a></li>
+        <li><a href="stage.html">Stages</a></li>
+        <li><a href="veille.html">Veille</a></li>
+        <li><a href="competence.html">Compétences</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="project-page">
+    <h2 class="main-title">Projet Congrès</h2>
+     <h3>Contexte :</h3>
+            <p>
+                Application web de gestion du congrès national des Maisons des Ligues (ANALIM) — gestion des inscriptions, 
+                sessions, activités, facturation et règlements. Réalisé en PHP orienté objet (MVC) avec une base MySQL.
+            </p>
+
+            <h3>Outils et architecture :</h3>
+            <ul>
+                <li>Langage : PHP (POO)</li>
+                <li>Architecture : MVC (Controllers / Models / Views)</li>
+                <li>Base de données : MySQL (modélisation MCD → MLD)</li>
+                <li>Accès base : PDO</li>
+                <li>Gestion de version : Git</li>
+            </ul>
+
+            <hr>
+
+            <h3>Objectifs de la mission 4 (T1.5, T2.4) :</h3>
+            <ul>
+                <li>
+                    <strong>T1.5 — Gestion des organismes payeurs :</strong> 
+                    CRUD complet (Créer, Modifier, Supprimer, Lister) des organismes 
+                    : entreprises, administrations, universités, lycées.
+                </li>
+
+                <li>
+                    <strong>T2.4 — Règlements :</strong> 
+                    Enregistrement du règlement d'une facture existante, association d’un organisme payeur si nécessaire,
+                    impression d’un ticket récapitulatif (montant, facture, payeur, congressiste) 
+                    et possibilité d’annuler le règlement.
+                </li>
+            </ul>
+
+            <hr>
+
+            <h3>Captures :</h3>
+            <br>
+            <div class="swiper mySwiper4">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/congres/congres1.png" alt="Accueil Congrès"></div>
+                    <div class="swiper-slide"><img src="img/congres/congres.png" alt="Congrès"></div>
+                    <div class="swiper-slide"><img src="img/congres/congresadmin1.png" alt="Admin Congrès 1"></div>
+                    <div class="swiper-slide"><img src="img/congres/congresadmin2.png" alt="Admin Congrès 2"></div>
+                    <div class="swiper-slide"><img src="img/congres/congresadmin3.png" alt="Admin Congrès 3"></div>
+                    <div class="swiper-slide"><img src="img/congres/congres2.png" alt="Congrès 2"></div>
+                    <div class="swiper-slide"><img src="img/congres/congres3.png" alt="Congrès 3"></div>
+                    <div class="swiper-slide"><img src="img/congres/congres4.png" alt="Congrès 4"></div>
+                </div>
+
+                <!-- Boutons et pagination -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+</section>
+<footer>
+    <p>&copy; 2025 Souf Abdjahi-Dine | Portfolio BTS SIO</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

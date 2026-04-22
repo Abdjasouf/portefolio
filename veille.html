@@ -13,69 +13,100 @@
         <li><a href="index.html">Accueil</a></li>
         <li><a href="profil.html">Profil </a></li>
         <li><a href="projets.html">Projets</a></li>
-        <li><a href="documentation.html">Documentation</a></li>
-        <li class="active"><a href="veille.html">Veille</a></li>
         <li><a href="stage.html">Stages</a></li>
+        <li class="active"><a href="veille.html">Veille</a></li>
         <li><a href="competence.html">Compétences</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
-</nav>
+</nav><section class="veille-container">
 
-<section class="veille-container">
-    <h2>Ma Veille Technologique</h2>
-    <p class="veille-introduction">
-        Mon sujet de veille pour cette année est axé sur les technologies qui repoussent les limites des applications web et logicielles. J'ai choisi d'approfondir le sujet de **WebAssembly (Wasm)**, une innovation majeure pour le développement moderne.
+    <h1 class="main-title">Ma Veille Technologique</h1>
+
+    <p class="veille-intro">
+        Ma veille porte sur la cybersécurité, les langages de programmation et les évolutions du développement web.
+        Je sélectionne des articles récents (2024 → 2026) pour suivre les nouvelles menaces et technologies.
     </p>
 
     <div class="veille-grid">
-        
-        <!-- Article 1: Introduction à WebAssembly -->
-        <article class="veille-card">
-            <h3>⭐ Qu'est-ce que WebAssembly (Wasm) ?</h3>
-            <p>
-                Wasm est un format d'instructions binaires de bas niveau pour une machine virtuelle "stack-based". Il est conçu pour être un langage de compilation portable pour les langages de haut niveau (C/C++, Rust, Python), permettant leur exécution côté client à une vitesse proche de la performance native.
-            </p>
-            <p class="tag-label">Domaine : Web, Performance, Langages</p>
+
+        <!-- CYBERSECURITE -->
+        <article class="veille-card cyber">
+            <span class="badge">CYBER</span>
+            <h3>Panorama de la cybermenace (2025)</h3>
+            <p>Les cyberattaques explosent.</p>
+            <a href="https://cyber.gouv.fr/actualites/panorama-de-la-cybermenace-2025/" target="_blank" rel="noopener noreferrer">Lire l’article →</a>
         </article>
 
-        <!-- Article 2: Fonctionnement et Impact sur la Performance -->
-        <article class="veille-card">
-            <h3>⚡ Performance et Langages Compilés</h3>
-            <p>
-                Contrairement à JavaScript qui est interprété, Wasm est pré-compilé et optimisé, ce qui permet des gains de performance spectaculaires, notamment pour les applications gourmandes en calcul (jeux 3D, montage vidéo, CAO). Wasm ne remplace pas JavaScript, mais travaille avec lui, permettant aux développeurs SLAM d'exploiter le meilleur des deux mondes.
-            </p>
-            <div class="image-placeholder">
-                
-            </div>
-            <p class="tag-label">Mot-clés : Rust, Go, C++, Vitesse d'exécution</p>
-        </article>
-        
-        <!-- Article 3: Applications et Scénarios concrets -->
-        <article class="veille-card">
-            <h3>💡 Utilisation dans les Applications Métiers</h3>
-            <p>
-                Pour le BTS SIO SLAM, Wasm ouvre des portes pour :
-                <ul>
-                    <li>L'exécution de code existant (legacy) en environnement web.</li>
-                    <li>Les applications de bureau (Desktop) utilisant des frameworks comme Electron.</li>
-                    <li>Le Cloud Computing (Wasm hors du navigateur) pour des fonctions serverless légères et rapides.</li>
-                </ul>
-            </p>
-            <p class="tag-label">Application : Figma, AutoCAD, Serverless Functions</p>
+        <article class="veille-card cyber">
+            <span class="badge">CYBER</span>
+            <h3>IA et cybersécurité</h3>
+            <p>L’IA est utilisée pour détecter les menaces mais aussi pour créer des attaques.</p>
+            <a href="https://www.portail-ie.fr/univers/2025/ia-et-cybersecurite/" target="_blank" rel="noopener noreferrer">Lire l’article →</a>
+        </article> 
+
+        <article class="veille-card cyber">
+            <span class="badge">CYBER</span>
+            <h3>Phishing mobile en hausse</h3>
+            <p>Les attaques via SMS et apps mobiles deviennent dominantes.</p>
+            <a href="https://guardia.school/boite-a-outils/smishing-le-hameconnage-par-sms-se-repand-en-france.html" target="_blank" rel="noopener noreferrer">Lire l’article →</a>
         </article>
 
-        <!-- Article 4: Sources et suivi -->
-        <article class="veille-card">
-            <h3>🔗 Sources et Outils de Veille</h3>
-            <p>
-                J'utilise principalement les sources suivantes pour suivre l'évolution de WebAssembly :
-                <ul>
-                    <li>**MDN Web Docs** : Documentation technique et tutoriels.</li>
-                    <li>**Hacker News / Reddit (r/WebAssembly)** : Pour les discussions et annonces de projets.</li>
-                    <li>**Le site officiel Wasm** : Pour les propositions de standardisation et mises à jour du consortium.</li>
-                </ul>
-            </p>
-            <p class="tag-label">Méthodologie : Curation, Agrégation RSS</p>
+        <article class="veille-card cyber">
+            <span class="badge">CYBER</span>
+            <h3>Cyberattaques JO 2024</h3>
+            <p>Les JO de Paris ont été une cible majeure de cyberattaques.</p>
+            <a href="https://bigmedia.bpifrance.fr/nos-dossiers/jo-paris-2024-et-cyberattaques-comment-les-pme-peuvent-elles-se-proteger" target="_blank" rel="noopener noreferrer">Lire l’article →</a>
+        </article>
+
+        <!-- LANGAGES -->
+        <article class="veille-card lang">
+            <span class="badge">LANG</span>
+            <h3>Python toujours n°1</h3>
+            <p>Python reste le langage le plus utilisé en 2025.</p>
+            <a href="https://www.tiobe.com/tiobe-index/" target="_blank" rel="noopener noreferrer">Lire l’article →</a>
+        </article>
+
+        <article class="veille-card lang">
+            <span class="badge">LANG</span>
+            <h3>Rust en forte croissance</h3>
+            <p>Rust devient populaire pour sa sécurité mémoire.</p>
+            <a href="https://rust.developpez.com/actu/377795/Les-developpeurs-principaux-de-CPython-proposent-d-integrer-Rust-afin-d-ameliorer-la-securite-memoire-et-de-reduire-les-vulnerabilites-dans-le-code-source-C-de-Python-ce-qui-suscite-des-debats/" target="_blank" rel="noopener noreferrer">Lire l’article →</a>
+        </article>
+
+        <article class="veille-card lang">
+            <span class="badge">LANG</span>
+            <h3>JavaScript évolue encore</h3>
+            <p>JS reste incontournable aisni que d'autres frameworks modernes.</p>
+            <a href="https://oclock.io/pourquoi-se-former-a-javascript-en-2025" target="_blank" rel="noopener noreferrer">Lire l’article →</a>
+        </article>
+
+        <!-- TECH -->
+
+        <article class="veille-card dev">
+            <span class="badge">DEV</span>
+            <h3>Explosion de l’IA</h3>
+            <a href="https://www.highfive.fr/intelligence-artificielle-revolution-metiers/" target="_blank" rel="noopener noreferrer">Lire l’article →</a>
+        </article>
+
+        <article class="veille-card dev">
+            <span class="badge">DEV</span>
+            <h3>Docker incontournable</h3>
+            <p>Docker simplifie le déploiement des applications.</p>
+            <a href="https://www.redhat.com/fr/topics/containers/what-is-docker" target="_blank" rel="noopener noreferrer">Lire l’article →</a>
+        </article>
+
+        <article class="veille-card dev">
+            <span class="badge">DEV</span>
+            <h3>API REST</h3>
+            <p>Les APIs sont essentielles dans les apps modernes.</p>
+            <a href="https://www.ibm.com/fr-fr/think/topics/api" target="_blank" rel="noopener noreferrer">Lire l’article →</a>
+        </article>
+
+        <article class="veille-card dev">
+            <span class="badge">DEV</span>
+            <h3>Data et Big Data</h3>
+            <p>Les données sont au cœur des décisions.</p>
+            <a href="https://www.ibm.com/topics/big-data" target="_blank" rel="noopener noreferrer">Lire l’article →</a>
         </article>
 
     </div>

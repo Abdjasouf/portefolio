@@ -2,101 +2,71 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8" />
-    <title>Mon Stage en Milieu Professionnel | Souf Abdjahi-Dine</title>
+    <title>Mes Stages | Souf Abdjahi-Dine</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
+
 <body>
 
 <nav>
     <ul class="menu">
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="profil.html">Profil </a></li>
+        <li><a href="profil.html">Profil</a></li>
         <li><a href="projets.html">Projets</a></li>
-        <li><a href="documentation.html">Documentation</a></li>
-        <li><a href="veille.html">Veille</a></li>
         <li class="active"><a href="stage.html">Stages</a></li>
+        <li><a href="veille.html">Veille</a></li>
         <li><a href="competence.html">Compétences</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
 </nav>
 
-<section class="stage-report-container">
-    <h2>Mon Stage en Entreprise</h2>
+<section class="projects-container">
+    <h2 class="main-title">Mes Stages</h2>
 
-    <div class="stage-intro-card">
-        <h3>🏢 Contexte et Mission</h3>
-        <p>J'ai effectué mon stage au sein de l'entreprise **Broussaud Textile** située au Cars, en Nouvelle-Aquitaine. Cette expérience a été cruciale pour l'application pratique des compétences acquises en BTS SIO SLAM.</p>
-        
-        <div class="mission-details-grid">
-            
-            <div class="details-box">
-                <h4>🎯 Mission Principale</h4>
-                <p>Développement complet d'une application web interne de gestion des stocks et de suivi des commandes, visant à optimiser les processus administratifs et logistiques de l'entreprise.</p>
-            </div>
-            
-            <div class="details-box">
-                <h4>🛠️ Environnement Technique</h4>
-                <ul>
-                    <li>**Framework :** Symfony 6/7</li>
-                    <li>**Langages :** PHP 8, Twig, HTML, CSS, JavaScript</li>
-                    <li>**Base de données :** MySQL (Doctrine ORM)</li>
-                    <li>**Outils :** Git, Composer, Docker (ou équivalent)</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    <div class="stage-tasks-summary">
-        <h3>✅ Tâches et Réalisations Clés</h3>
-        <p>Ce stage m'a permis de gérer l'intégralité du cycle de vie d'une application :</p>
-        <ul>
-            <li>**Conception :** Modélisation de la base de données (UML / Merise).</li>
-            <li>**Développement Back-end :** Mise en place de l'API RESTful, gestion des entités et des relations avec Doctrine.</li>
-            <li>**Développement Front-end :** Création d'une interface utilisateur responsive avec Twig et Bootstrap.</li>
-            <li>**Authentification :** Gestion des rôles utilisateurs et des permissions (Security Bundle de Symfony).</li>
-        </ul>
-    </div>
-    
-    <div class="stage-visuals-section">
-        <h3>🚀 Aperçu de l'Application Symfony</h3>
-        <p>Voici les principales interfaces que j'ai conçues et développées :</p>
-        
-        <!-- Carrousel des captures d'écran -->
-        <div class="swiper mySwiperStage">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="img/stage1.png" alt="Tableau de bord de l'application" /></div>
-                <div class="swiper-slide"><img src="img/stage2.png" alt="Page de connexion sécurisée" /></div>
-                <div class="swiper-slide"><img src="img/stage3.png" alt="Gestion des utilisateurs et rôles" /></div>
-                <div class="swiper-slide"><img src="img/stage4.png" alt="Formulaire de création de commande" /></div>
-                <div class="swiper-slide"><img src="img/stage5.png" alt="Vue détaillée d'un article" /></div>
-                <div class="swiper-slide"><img src="img/stage6.png" alt="Écran de validation de stock" /></div>
-                <div class="swiper-slide"><img src="img/stage7.png" alt="Gestion des livraisons" /></div>
-                <div class="swiper-slide"><img src="img/stage8.png" alt="Rapport de performance" /></div>
-                <div class="swiper-slide"><img src="img/stage9.png" alt="Interface 9" /></div>
-                <div class="swiper-slide"><img src="img/stage10.png" alt="Interface 10" /></div>
-                <div class="swiper-slide"><img src="img/stage11.png" alt="Interface 11" /></div>
-                <div class="swiper-slide"><img src="img/stage12.png" alt="Interface 12" /></div>
-                <div class="swiper-slide"><img src="img/stage13.png" alt="Interface 13" /></div>
-                <div class="swiper-slide"><img src="img/stage14.png" alt="Interface 14" /></div>
+    <div class="projects-grid">
+
+        <!-- STAGE 1 -->
+        <article class="project-card">
+            <div class="project-header">
+                <img src="img/stagebroussaud.webp" alt="Broussaud Textile">
             </div>
 
-            <!-- Navigation & Pagination Swiper -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-        </div>
+            <div class="project-body">
+                <span class="tag">Symfony / PHP</span>
+                <h3>Stage 1 - Broussaud Textile</h3>
+                <p></p>
+
+                <a href="stage1.html" class="btn-link">
+                    Détails du stage →
+                </a>
+            </div>
+        </article>
+
+
+        <!-- STAGE 2 -->
+        <article class="project-card">
+            <div class="project-header">
+                <img src="img/stageurbaka.png" alt="Urbaka Limoges">
+            </div>
+
+            <div class="project-body">
+                <span class="tag">Web / WordPress</span>
+                <h3>Stage 2 - Urbaka Limoges</h3>
+                <p></p>
+
+                <a href="stage2.html" class="btn-link">
+                    Détails du stage →
+                </a>
+            </div>
+        </article>
+
     </div>
-    
 </section>
 
 <footer>
     <p>&copy; 2025 Souf Abdjahi-Dine | Portfolio BTS SIO</p>
 </footer>
-
-<script src="script.js"></script>
 
 </body>
 </html>
