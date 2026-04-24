@@ -386,6 +386,17 @@ footer {
     text-decoration: underline;
 }
 
+.mySwiper6 {
+    max-width: 900px; /* réduit la largeur */
+    margin: 40px auto;
+}
+
+.mySwiper6 img {
+    width: 100%;
+    max-height: 400px; /* réduit la hauteur */
+    object-fit: contain; /* pas de déformation */
+    border-radius: 10px;
+}
 /* ==================================================================== */
 /* 4. PAGE COMPÉTENCES (COMPETENCE.HTML) */
 /* ==================================================================== */
