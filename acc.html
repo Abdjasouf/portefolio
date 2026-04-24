@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Mon Profil | Souf Abdjahi-Dine</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    </head>
+    <meta charset="UTF-8" />
+    <title>Mes Projets | Souf Abdjahi-Dine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
 <body>
 
 <nav>
     <ul class="menu">
         <li><a href="index.html">Accueil</a></li>
-        <li class="active"><a href="profil.html">Profil </a></li>
-        <li><a href="projets.html">Projets</a></li>
+        <li class="active"><a href="projets.html">Projets</a></li>
         <li><a href="stage.html">Stages</a></li>
         <li><a href="veille.html">Veille</a></li>
         <li><a href="competence.html">Compétences</a></li>
@@ -20,61 +21,64 @@
     </ul>
 </nav>
 
-<section class="main-profile">
-    
-    <div class="profile-header">
-        <div class="profil-photo">
-            <img src="img/moji.PNG" alt="Photo de profil de Souf Abdjahi-Dine">
-        </div>
-        <h1>Souf Abdjahi-Dine</h1>
-        <p class="status">Étudiant en BTS SIO option SLAM | Développeur Web & Logiciel</p>
-    </div>
+<section class="project-page">
+    <h2 class="main-title">Projet "Aux Claviers Citoyens"</h2>
+    <h3>Contexte : "Aux Claviers Citoyens"</h3>
+            <p>
+                Mission de développement d'une solution numérique pour la pratique du e-sport en environnement militaire. 
+                L'objectif est de fusionner compétition virtuelle et effets réels via des objets connectés, tout en renforçant la cohésion et le leadership des troupes.
+            </p>
 
-    <div class="profile-grid">
-        
-        <div class="grid-item presentation-card">
-            <h3 class="card-title">👨‍💻 Mon Parcours</h3>
-            <p>Actuellement étudiant en BTS SIO (Services Informatiques aux Organisations), je me spécialise en Solutions Logicielles et Applications Métiers (SLAM). Mon objectif est d'acquérir les compétences nécessaires pour concevoir et développer des applications web, mobiles et logicielles robustes et efficaces.</p>
-            
-            <div class="section download-cv">
-                <h3 class="card-title">Téléchargement (CV)</h3>
-                <p>Retrouvez mon parcours détaillé et mes coordonnées.</p>
-                <a href="cv.pdf" target="_blank" class="btn-download-modern">
-                    Télécharger mon CV (PDF)
-                </a>
-            </div>
-        </div>
-        
-        <div class="grid-item education-card">
-            <h3 class="card-title">🎓 Diplômes et Formations</h3>
-            
-            <ul class="timeline">
-              <li class="timeline-item">
-                    <span class="timeline-year">En Cours</span>
-                    <span class="timeline-title">BTS SIO option SLAM</span>
-                    <span class="timeline-institution">Suzanne Valadon</span>
-                </li>
-                <li class="timeline-item">
-                    <span class="timeline-year">2024</span>
-                    <span class="timeline-title">Baccalauréat Général</span>
-                    <span class="timeline-institution">Lycée Turgot</span>
-                </li>
-                <li class="timeline-item">
-                    <span class="timeline-year">2021</span>
-                    <span class="timeline-title">Diplôme National du Brevet</span>
-                    <span class="timeline-institution">Collège Guy de Maupassant</span>
-                </li>
+            <h3>Environnement Technique :</h3>
+            <ul>
+                <li><strong>Plateforme :</strong> Application Mobile (Consommation d'API REST)</li>
+                <li><strong>Backend / API :</strong> Authentification OAuth2 (Bearer Token)</li>
+                <li><strong>Collaboration :</strong> Interopérabilité avec les BTS CIEL (IoT) et SIO-SISR (Infrastructure)</li>
+                <li><strong>Localisation :</strong> Phase finale prévue sur la Base Aérienne 721 de Rochefort</li>
             </ul>
-        </div>
 
-    </div>
+            <hr>
 
-    <script src="script.js"></script>
+            <h3>Ma Mission : Gestion des Équipes</h3>
+            <p>
+                J'ai été responsable du module de gestion des compétiteurs. Ce module est crucial pour structurer les tournois et assurer le suivi des performances.
+            </p>
+            
+            
+
+            <h3>Fonctionnalités développées :</h3>
+            <ul>
+                <li><strong>CRUD Équipes :</strong> Création, modification (nomination) et retrait d'équipes dans un tournoi spécifique via l'API.</li>
+                <li><strong>Consommation de l'API :</strong> Implémentation des requêtes sécurisées pour lister les équipes et leurs points accumulés.</li>
+                <li><strong>Affichage Dynamique :</strong> Visualisation précise des détails d'une équipe (ID, Nom, Score) pour les organisateurs.</li>
+                <li><strong>Expérience Utilisateur (Front-end) :</strong> Design de l'interface mobile pour une gestion fluide sur le terrain.</li>
+            </ul>
+
+            <hr>
+
+            <h3>Défis relevés :</h3>
+            <ul>
+                <li><strong>Sécurité :</strong> Intégration du jeton d'accès (Passport numérique) pour chaque requête API.</li>
+                <li><strong>Travail d'équipe :</strong> Coordination avec les développeurs des modules "Matchs" et "Tournois" pour garantir la cohérence des données.</li>
+            </ul>
+
+            <div class="swiper mySwiper6">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/acc-teams-list.png" alt="Liste des équipes"></div>
+                    <div class="swiper-slide"><img src="img/acc-create-team.png" alt="Création d'une équipe"></div>
+                    <div class="swiper-slide"><img src="img/acc-api-test.png" alt="Tests de l'API Team"></div>
+                    <div class="swiper-slide"><img src="img/acc-rochefort.png" alt="Base Aérienne Rochefort"></div>
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
 </section>
 
 <footer>
     <p>&copy; 2025 Souf Abdjahi-Dine | Portfolio BTS SIO</p>
 </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
