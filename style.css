@@ -1149,3 +1149,166 @@ footer {
     margin-bottom: 25px;
     border-left: 4px solid #9c7449;
 }
+
+/* fond projet acc */
+.project-acc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url("img/AuxClaviersCitoyens.png") no-repeat center center/cover;
+
+    filter: blur(10px);
+    transform: scale(1.1);
+
+    z-index: -2;
+}
+
+/* couche sombre pour lisibilité */
+.project-acc::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+/* fond projet congres */
+
+.project-congres {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url("img/congresimg.webp") no-repeat center center/cover;
+
+    filter: blur(10px);
+    transform: scale(1.1);
+
+    z-index: -2;
+}
+
+/* couche sombre pour lisibilité */
+.project-congres::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+/* fond projet jardinier */
+
+.project-jardinier {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url("img/jardinierimg.webp") no-repeat center center/cover;
+
+    filter: blur(10px);
+    transform: scale(1.1);
+
+    z-index: -2;
+}
+
+/* couche sombre pour lisibilité */
+.project-jardinier::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+/* fond projet karate */
+
+.project-karate {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url("img/karateimage.webp") no-repeat center center/cover;
+
+    filter: blur(10px);
+    transform: scale(1.1);
+
+    z-index: -2;
+}
+
+/* couche sombre pour lisibilité */
+.project-karate::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+/* fond projet resto */
+
+.project-resto {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url("img/restoimg.webp") no-repeat center center/cover;
+
+    filter: blur(10px);
+    transform: scale(1.1);
+
+    z-index: -2;
+}
+
+/* couche sombre pour lisibilité */
+.project-resto::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+
+/* fond projet seminaire */
+
+.project-seminaire {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url("img/seminaireimg.jpg") no-repeat center center/cover;
+
+    filter: blur(10px);
+    transform: scale(1.1);
+
+    z-index: -2;
+}
+
+/* couche sombre pour lisibilité */
+.project-seminaire::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+.main-title {
+    color: var(--color-primary);
+}
+
+.project-title {
+    color: white; /* couleur différente */
+}
