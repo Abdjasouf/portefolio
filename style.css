@@ -25,13 +25,6 @@
     box-sizing: border-box;
 }
 
-.main-title {
-    color: var(--color-primary);
-}
-
-.project-title {
-    color: white; /* couleur différente */
-}
 
 body {
     font-family: var(--font-family);
@@ -429,11 +422,6 @@ footer {
 /* ==================================================================== */
 /* 4. PAGE COMPÉTENCES (COMPETENCE.HTML) */
 /* ==================================================================== */
-/* ============================================
-   SKILLS — CSS STANDALONE
-   À coller dans style.css section 4
-   ou importer via <link href="skills.css">
-   ============================================ */
 
 /* ---- SECTION WRAPPER ---- */
 .skills-section {
@@ -577,6 +565,7 @@ footer {
         font-size: 0.82rem;
     }
 }
+
 /* ==================================================================== */
 /* 5. PAGE PROFIL (PROFIL.HTML) */
 /* ==================================================================== */
@@ -846,7 +835,6 @@ footer {
 .instagram {
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
-
 
 
 /* ==================================================================== */
